@@ -17,8 +17,6 @@ def close(self):
     """call close method"""
     storage.close()
 
-# handle 404 errors
-
 
 @app.errorhandler(404)
 def page_not_found(e):
