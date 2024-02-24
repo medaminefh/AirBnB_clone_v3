@@ -16,6 +16,12 @@ def close(self):
     """call close method"""
     storage.close()
 
+# handle 404 errors
+@app.errorhandler(404)
+def page_not_found(e):
+    """return 404 error"""
+    return {"error": "Not found"}, 404
+
 
 if __name__ == "__main__":
     """run the app using the env variables"""
